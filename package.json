@@ -1,0 +1,18 @@
+{
+  "name": "card-creator",
+  "version": "1.0.0",
+  "description": "Masaüstü ve web tabanlı oyun kart oluşturucu",
+  "main": "src/main/main.js",
+  "scripts": {
+    "dev": "concurrently \"vite --mode electron\" \"wait-on http://localhost:5173 && electron .\"",
+    "dev:web": "vite --mode web",
+    "build": "vite build --mode electron && electron-builder",
+    "build:web": "vite build --mode web",
+    "build:react": "vite build --mode electron",
+    "start": "electron .",
+    "preview": "vite preview",
+    "deploy": "npm run build:web && gh-pages -d dist"
+  },
+  "author": "MET",
+  "license": "MIT"
+}
